@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<ProgressBar
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintLeft_toLeftOf="@+id/imagecard"
+    app:layout_constraintRight_toRightOf="@+id/imagecard"
+    app:layout_constraintTop_toTopOf="@+id/imagecard"
+    app:layout_constraintBottom_toBottomOf="@+id/imagecard"
+    android:id="@+id/progess"
+    android:visibility="gone"
+    />
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="Meme Sharing APP"
+    app:layout_constraintBottom_toTopOf="@+id/imagecard"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:textSize="35sp"
+    android:textAlignment="center"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="40dp"
+    />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imagecard"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteX="1dp"
+        app:cardCornerRadius="10dp"
+        app:cardBackgroundColor="@color/cardview_shadow_end_color"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/meme"
+                android:scaleType="fitXY"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<Button
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintRight_toLeftOf="@id/guideline2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    android:shadowRadius="10"
+    android:id="@+id/share"
+    android:text="Share"
+    android:padding="30dp"
+    />
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="30dp"
+        android:id="@+id/next"
+        android:text="Next"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
